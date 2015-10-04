@@ -20,6 +20,7 @@ $(call inherit-product, device/lge/g2-common/g2.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+<<<<<<< HEAD
 # GSM permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -29,3 +30,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     NfcNci
+=======
+# NFC
+$(call inherit-product, device/lge/g2-common/nfc.mk)
+>>>>>>> cm/cm-12.1

@@ -1,10 +1,8 @@
 #!/bin/sh
 
-VENDOR=lge
-DEVICE=d802
-OUTDIR=vendor/$VENDOR/$DEVICE
-MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+set -e
 
+<<<<<<< HEAD
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2014 The CyanogenMod Project
 #
@@ -93,3 +91,8 @@ EOF
 
 USE_CAMERA_STUB := false
 EOF
+=======
+export VENDOR=lge
+export DEVICE=d802
+./../../$VENDOR/g2-common/setup-makefiles.sh $@
+>>>>>>> cm/cm-12.1

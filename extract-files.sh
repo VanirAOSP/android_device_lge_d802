@@ -1,8 +1,8 @@
 #!/bin/sh
 
-VENDOR=lge
-DEVICE=d802
+set -e
 
+<<<<<<< HEAD
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
@@ -15,3 +15,8 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$ `; do
 done
 
 ./setup-makefiles.sh
+=======
+export VENDOR=lge
+export DEVICE=d802
+./../../$VENDOR/g2-common/extract-files.sh $@
+>>>>>>> cm/cm-12.1
